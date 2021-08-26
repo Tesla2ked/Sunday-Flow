@@ -1,10 +1,8 @@
-
-
 Welcome to Debbie's Kitchen
  Create a meal for us
-Zuchini
-Pasta
-Wine
-Beans
+   Zuchini
+   Pasta
+   Wine
+   Beans
 
 Thank You
