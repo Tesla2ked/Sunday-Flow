@@ -1,0 +1,88 @@
+Github/Git  �How-to" - It's a Distributed Version control system created by Linus Torvalds (4/2005)
+Git is a framework of change sets; .txt files. Whereas Branching and Merging are performed through a 
+Pull Request (PR) process. 
+//git-scm.com it's Free (Open-source). 
+Step #1 Create an account at Github. 
+Step #2 Install Git on your system of Choice. Your Git local branch repo is called, " Master"
+
+Concepts:
+Trunk Based Development - Currently working on 4.7v in main branch but issues so create a 
+second branch and work on 5.0v simultaneously then merge back to master Branch.
+
+Forking - Another contributor wants to assist with Project so Provide link or they can Search. 
+Contibutor Dont have RW rights to change project.
+
+Linting:
+
+Stash :
+
+Tags:
+
+GitLab is for Developers but also there is Atlassian Bitbucket version too (i.e) Jira
+
+Github (Origin) will run code validation tests(Linting),etc...
+CI/CD Pipeline: Commit to Source(Github Rep); Build(.jar file); Scan / Test (Pass/Fail) then Release, and Deploy into Production.
+
+   
+On Raspberry PI
+-------------------
+Installation procedures:
+$ sudo apt update
+$ sudo apt install git
+$ sudo apt show git
+$ sudo apt list --installed | grep git
+
+Where is git installed-
+$ which git   /usr/bin/git
+$ ls -alt | grep git
+
+Set Name & email:
+$ git config --system, project or global
+$ git config --global user.name "  "
+$ git config --global user.email "  "
+
+Create Repo and then initialize:
+$ sudo mkdir xyz
+$ sudo git init --bare   /Documents/Git/Projects
+$ sudo chmod -R 777 .
+
+Setup a Text Editor - Visual Studio Code:
+$ git config --global core.editor "  "
+
+Register a GitHub Repo:
+$ git clone https://github.com/xyz
+
+Setup Https/SSH for Repo(s) (eg.) @ Github, edominguez5x@gmail.com, pwd: P@nther1961
+
+ in VSC, make chaanges to file, then Ctrl S (save) then select + to add then add a message and 
+ then select "checkmark" to commit(save) then push to Github Repo. 
+  
+
+Useful CLI Commands:
+----------------------
+  $ git config �-list
+  $ git config -- global -l   "on Branch (Master) or Project-level"
+  $ cat .gitconfig
+  $ git --version
+  $ cat .gitconfig
+  $ nano .gitconfig (to edit the file)
+  $ git add (locally)
+  $ git commit -m " name(Semantic Style)"  (locally) - means "Save"
+  $ git push (uploads to Git Repository) (i.e) git push --set-upstream    
+        origin provider-implementations
+  $ git clone (copy the remote Repo to local for editing (i.e) git clone  
+        git@github.com:IGNW/terraform-provider-cisco-aci.git
+  $ git branch - list, create or delete branches
+  $ git fetch (Pulls file from Git Repo)
+  $ git pull (Pulls remote changes to your local branch) also the same as 
+  $ git merge
+  $ git status  (shows git changes or working tree)
+  $ git add - add a file
+  $ git rm aci/resource_subnet.go
+  $ git mv aci/resource_epg.go aci/r_epg.go
+  $ git stash (Stash your changes and cleans up the tree)
+  $ git stash list or gi stash show
+  $ git checkout -b "    " - switch to another branch
+  $ git reset - reset current HEAD to specified state
+  $ git diff - shows changes between commits and working tree
+  $ git log - shows commit logs
