@@ -12,7 +12,7 @@ second branch and work on 5.0v simultaneously then merge back to master Branch.
 Forking - Another contributor wants to assist with Project so Provide link or they can Search. 
 Contibutor Dont have RW rights to change project.
 
-Linting:
+Linting: Analyzing the syntax of the code created
 
 Stash :
 
